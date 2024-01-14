@@ -50,10 +50,11 @@
           res.innerHTML = '';
           city.innerHTML = '';
           for(let i = 0; i < state_obj.length; i++){
-            city.innerHTML += `<span class='em'>${state_obj[i].city}</span>`;
-            // console.log(state_obj[i].city)
+            if(ev.target.textContent == state_obj[i].state){
+              city.innerHTML += `<span class='em'>${state_obj[i].city}</span>`;
+
+            }
           }
-          console.log(state_obj.length);
         })
       })
       }
